@@ -1,0 +1,12 @@
+.login_container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login_card {
+  width: 448px;
+  height: 408px;
+  border: 1px solid #212121;
+}
