@@ -3,10 +3,11 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  box-sizing: border-box;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #000;
+  color: #212121;
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,4 +18,26 @@
 body {
   margin: 0;
   height: 100vh;
+}
+
+input {
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #424242;
+  box-sizing: border-box;
+  color: #212121;  
+}
+
+button{
+  height: 40px;
+  width: 100%;
+  border: 0;  
+}
+
+button.primary{
+  background-color: #212121;
+}
+img {
+  
 }
