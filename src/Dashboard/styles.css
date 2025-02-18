@@ -1,9 +1,21 @@
 .dashboard_container {
-  border: 1px solid red;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1180px;
   margin: 0 auto;
-  height: 100vh;
-  padding: 0 20px;
+  height: 100%;
+  padding: 0 20px;  
 }
 
+.dashboard_wrapper{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dashboard_wrapper > div {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.dashboard_wrapper > div:nth-child(4n) {
+  margin-right: unset;
+}

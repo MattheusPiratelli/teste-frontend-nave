@@ -5,6 +5,7 @@ export const Login = () => {
     <div className="login_container">
       <div className="login_card">
         <img src="/logo.png" alt="Logo Nave.RS" />
+        
         <div>
           <label htmlFor="email">E-mail</label>
           <input id="email" type="text" />

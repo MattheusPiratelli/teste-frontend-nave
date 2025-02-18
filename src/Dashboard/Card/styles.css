@@ -1,0 +1,29 @@
+.card_container {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;  
+}
+
+.card_container h1 {
+ font-size: 16px;
+ line-height: 18px;
+ margin-top: 10px;
+ font-weight: 600;
+ color: #212121;
+}
+
+.card_container p {
+ margin-top: 5px;
+ font-size: 16px;
+ font-weight: 400px;
+}
+
+.icone {
+  width: 24px;
+  height: 24px;
+
+}
+
+.card_container div {
+  margin-top: 10px;
+}

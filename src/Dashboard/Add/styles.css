@@ -1,0 +1,19 @@
+.add_container {  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 85px;
+}
+
+.add_container img {
+  width: 141px;
+  height: 30px;
+
+}
+
+.add_container button {
+  width: 176px;
+  height: 40px;
+  background-color: #212121;
+  font-size: 14px;
+}
