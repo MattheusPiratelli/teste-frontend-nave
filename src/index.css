@@ -36,7 +36,8 @@ input {
 button{
   height: 40px;
   width: 100%;
-  border: 0;  
+  border: 0;
+  cursor: pointer;
 }
 
 button.primary{

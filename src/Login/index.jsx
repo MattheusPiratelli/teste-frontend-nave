@@ -1,23 +1,27 @@
+import { use } from "react";
+import { Input } from "../Input";
 import "./styles.css";
+import { useNavigate } from "react-router";
 
 export const Login = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/dashboard");
+  };
+  
   return (
     <div className="login_container">
       <div className="login_card">
         <img src="/logo.png" alt="Logo Nave.RS" />
-        
-        <div>
-          <label htmlFor="email">E-mail</label>
-          <input id="email" type="text" />
-        </div>
+
+        <Input label={"E-mail"} />
+        <Input label={"Senha"} />
 
         <div>
-          <label htmlFor="senha">Senha</label>
-          <input id="senha" type="text" />
-        </div>
-        
-        <div>
-          <button className="primary">Entrar</button>
+          <button className="primary" onClick={handleClick}>
+            Entrar
+          </button>
         </div>
       </div>
     </div>
