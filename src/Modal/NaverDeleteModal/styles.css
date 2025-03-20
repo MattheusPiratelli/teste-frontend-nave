@@ -1,0 +1,68 @@
+.naver_delete_modal {
+  position: relative;
+  width: 530px;
+  height: 160px;
+  margin: auto;
+  background-color: #fff;
+  padding: 30px;
+}
+
+.naver_delete_modal > h1 {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 600px;
+  color: #212121;
+}
+
+.naver_delete_modal > p {
+  font-size: 16px;
+  line-height: 36px;
+  font-weight: 400;
+  margin-top: 20px;
+  color: #212121;
+}
+
+.naver_delete_modal > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 24px;
+  height: 24px;
+  background: #fff;
+}
+
+.container {
+  /* border: solid 1px red; */
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-top: 25px;
+  margin-right: 30px;
+
+}
+
+.excluir {
+  /* border: solid 1px blue; */
+  margin-left: 25px;
+  height: 40px;
+  width: 176px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600px;
+  color: #fff;
+  background-color: #212121;
+}
+
+.cancelar {
+  background-color: #fff;
+  border: solid 1px #212121;
+  height: 40px;
+  width: 176px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600px;
+  color: #212121;
+}

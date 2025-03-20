@@ -5,7 +5,7 @@ import { Input } from "../Input";
 import { Modal } from "../Modal";
 import { useState } from "react";
 
-export const Register = () => {
+export const Edit = () => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -19,12 +19,12 @@ export const Register = () => {
 
   return (
     <div className="register_container">
-      <Modal open={open} setOpen={setOpen} type={"NaverCreate"} />
+      <Modal open={open} setOpen={setOpen} type={"NaverUpdate"} />
       <Header />
       <div className="register_wrapper">
         <button className="register_goback" onClick={handleClick}>
           <img src="./return.png" alt="voltar" />
-          <h1 className="add"> Adicionar Naver </h1>
+          <h1 className="add"> Editar Naver </h1>
         </button>
         <div className="register_inputs">
           <Input label={"Nome"} />

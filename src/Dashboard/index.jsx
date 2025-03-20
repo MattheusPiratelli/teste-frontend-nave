@@ -7,7 +7,10 @@ const persons = [
   { id: 1, name: "Juliano Reis", employ: "Front-end Developer" },
   { id: 2, name: "Gabril do Couto", employ: "Front-end Developer" },
   { id: 3, name: "Eduardo Bittencourt", employ: "Front-end Developer" },
-  { id: 4, name: "Gustavo Pinho", employ: "Technology Manager" },
+  { id: 4, name: "Gustavo Pinho", employ: "Technology Manager" },  
+  { id: 5, name: "Bernardo Nascimento", employ: "Front-end Mobile Developer at Neocom" },
+  { id: 6, name: "Mattheus Piratelli", employ: "Front-end Developer" },
+  { id: 7, name: "Mattheus Piratelli", employ: "Front-end Developer" },
 ];
 
 export const Dashboard = () => {
