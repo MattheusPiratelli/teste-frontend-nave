@@ -1,22 +1,17 @@
-import "./styles.css";
 import { useNavigate } from "react-router";
-// import { Modal } from "../Modal";
-import { useState } from "react";
 
-export const Card = ({ id, name, employ}) => {
-  const [open, setOpen] = useState(false);
+import "./styles.css";
 
-  const navigate = useNavigate();  
+export const Card = ({ id, name, employ, setOpen }) => {
+  const navigate = useNavigate();
 
   const handleEdit = () => {
     navigate("/edit");
   };
 
   const handleDelete = () => {
-    navigate("/delete")
-
+    setOpen(true);
   };
-
 
   return (
     <div className="card_container">
@@ -25,11 +20,11 @@ export const Card = ({ id, name, employ}) => {
       <p>{employ}</p>
       <div className="button">
         <button className="lixeira" onClick={handleDelete}>
-        <img className="icone" src="/lixeira.png" alt="lixeira" />
+          <img className="icone" src="/lixeira.png" alt="lixeira" />
         </button>
         <button className="editar" onClick={handleEdit}>
-        <img className="icone" src="/editar.png" alt="editar" />
-        </button>        
+          <img className="icone" src="/editar.png" alt="editar" />
+        </button>
       </div>
     </div>
   );

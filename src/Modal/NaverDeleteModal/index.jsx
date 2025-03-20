@@ -1,7 +1,9 @@
 import "./styles.css";
 
-export const NaverDeleteModal = () => {
-  const handleClick = () => {};
+export const NaverDeleteModal = ({ setOpen }) => {
+  const handleClick = () => {
+    setOpen(false);
+  };
 
   return (
     <div className="naver_delete_modal">
