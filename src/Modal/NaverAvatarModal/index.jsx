@@ -1,6 +1,6 @@
 import "./styles.css";
 
-export const NaverDeleteModal = ({ setOpen }) => {
+export const NaverAvatarModal = ({ setOpen }) => {
   const handleClick = () => {
     setOpen(false);
   };
@@ -10,8 +10,12 @@ export const NaverDeleteModal = ({ setOpen }) => {
       <h1>Excluir Naver</h1>
       <p>Tem certeza que deseja excluir este Naver?</p>
       <div className="container">
-        <button onClick={handleClick} className="cancelar">Cancelar</button>
-        <button onClick={handleClick} className="excluir">Excluir</button>
+        <button onClick={handleClick} className="cancelar">
+          Cancelar
+        </button>
+        <button onClick={handleClick} className="excluir">
+          Excluir
+        </button>
       </div>
     </div>
   );

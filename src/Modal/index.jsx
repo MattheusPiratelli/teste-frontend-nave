@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import { NaverCreateModal } from "./NaverCreateModal";
 import { NaverUpdateModal } from "./NaverUpdatedModal";
 import { NaverDeleteModal } from "./NaverDeleteModal";
+import { NaverAvatarModal } from "./NaverAvatarModal";
+
 
 import "./styles.css";
 
@@ -16,6 +18,7 @@ export const Modal = ({ open, type, setOpen }) => {
     NaverCreate: <NaverCreateModal setOpen={setOpen} />,
     NaverUpdate: <NaverUpdateModal setOpen={setOpen} />,
     NaverDelete: <NaverDeleteModal setOpen={setOpen} />,
+    NaverAvatar: <NaverAvatarModal setOpen={setOpen} />,
   };
 
   const handleClick = () => {
