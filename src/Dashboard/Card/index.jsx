@@ -2,7 +2,7 @@ import { useNavigate } from "react-router";
 
 import "./styles.css";
 
-export const Card = ({ id, name, employ, setOpen, }) => {
+export const Card = ({ id, name, employ, onOpenModal }) => {
   const navigate = useNavigate();
 
   const handleEdit = () => {
@@ -10,11 +10,11 @@ export const Card = ({ id, name, employ, setOpen, }) => {
   };
 
   const handleDelete = () => {
-    setOpen(true);
+    onOpenModal("NaverDelete");
   };
 
   const handleClick = () => {
-    setOpen(true);
+    onOpenModal("NaverAvatar");
   };
 
   return (
