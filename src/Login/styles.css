@@ -22,7 +22,7 @@
   margin-bottom: 10px;
 }
 
-.login_card div{
+.login_card > div{
   width: 100%;
   margin-top: 30px;
 }

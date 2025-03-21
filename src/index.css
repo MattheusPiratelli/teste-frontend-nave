@@ -34,6 +34,9 @@ input {
 }
 
 button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 40px;
   width: 100%;
   border: 0;
@@ -41,10 +44,19 @@ button{
 }
 
 button.primary{
-  background-color: #212121;
+  background-color: rgb(33, 33, 33);
 }
 
 button.return{
   background-color: #fff;
   color: #212121;
+}
+
+button:hover {
+  background-color: rgba(33, 33, 33, 0.8)
+}
+
+button:disabled {
+  background-color: gray;
+  color: #fff;
 }

@@ -1,8 +1,8 @@
-export const Input = ({ label }) => {
+export const Input = ({ label, ...rest }) => {
   return (
     <div>
       <label htmlFor="label">{label}</label>
-      <input id="label" type="text" />
+      <input id="label" type="text" {...rest} />
     </div>
   );
 };
