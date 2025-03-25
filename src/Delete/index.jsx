@@ -35,7 +35,9 @@ export const Delete = () => {
           <Input label={"URL da foto do Naver"} />
         </div>
         <div className="register_save">
-          <button onClick={handleSave}>Salvar</button>
+          <button className="primary" onClick={handleSave}>
+            Salvar
+          </button>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import "./styles.css"
+import "./styles.css";
 import { useNavigate } from "react-router";
 
 export const Add = () => {
@@ -11,7 +11,9 @@ export const Add = () => {
   return (
     <div className="add_container">
       <img src="/navers.png" alt="navers" />
-      <button className="avatar" onClick={handleClick}>Adicionar Naver</button>
+      <button className="primary" onClick={handleClick}>
+        Adicionar Naver
+      </button>
     </div>
   );
 };

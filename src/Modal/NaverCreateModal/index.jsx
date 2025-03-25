@@ -1,9 +1,13 @@
 import "./styles.css";
 
-export const NaverCreateModal = ( {setOpen} ) => {
-const handleClick = () => {
-  setOpen(false);
-}
+export const NaverCreateModal = ({ setOpen, callBack }) => {
+  const handleClick = () => {
+    setOpen(false);
+
+    if (callBack) {
+      callBack();
+    }
+  };
 
   return (
     <div className="naver_create_modal">

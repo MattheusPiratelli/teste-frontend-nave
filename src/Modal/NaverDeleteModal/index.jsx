@@ -10,8 +10,12 @@ export const NaverDeleteModal = ({ setOpen }) => {
       <h1>Excluir Naver</h1>
       <p>Tem certeza que deseja excluir este Naver?</p>
       <div className="container">
-        <button onClick={handleClick} className="cancelar">Cancelar</button>
-        <button onClick={handleClick} className="excluir">Excluir</button>
+        <button onClick={handleClick} className="cancelar">
+          Cancelar
+        </button>
+        <button onClick={handleClick} className="excluir primary">
+          Excluir
+        </button>
       </div>
     </div>
   );

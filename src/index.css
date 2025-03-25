@@ -52,7 +52,7 @@ button.return{
   color: #212121;
 }
 
-button:hover {
+button.primary:hover {
   background-color: rgba(33, 33, 33, 0.8)
 }
 

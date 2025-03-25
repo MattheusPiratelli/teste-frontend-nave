@@ -2,7 +2,7 @@ import { useNavigate } from "react-router";
 
 import "./styles.css";
 
-export const Card = ({ id, name, employ, onOpenModal }) => {
+export const Card = ({ id, avatar, name, employ, onOpenModal }) => {
   const navigate = useNavigate();
 
   const handleEdit = () => {
@@ -19,7 +19,7 @@ export const Card = ({ id, name, employ, onOpenModal }) => {
 
   return (
     <div className="card_container">
-      <img onClick={handleClick} src={`avatar_${id}.png`} alt="juliano" />
+      <img onClick={handleClick} src={`${avatar}${id}`} alt="avatar" />
       <h1>{name}</h1>
       <p>{employ}</p>
       <div className="button">
