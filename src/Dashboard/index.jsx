@@ -13,6 +13,7 @@ export const Dashboard = () => {
   const [navers, setNavers] = useState([]);
   const [open, setOpen] = useState(false);
   const [type, setType] = useState();
+  const [naverId, setNaverId] = useState("");
 
   useEffect(() => {
     loadData();
@@ -26,23 +27,40 @@ export const Dashboard = () => {
     }
   };
 
-  const onOpenModal = (typeModal) => {
+  const onOpenModal = (typeModal, id) => {
+    id && setNaverId(id);
     setType(typeModal);
     setOpen(true);
   };
 
+  const callBack = (id) => {
+    if (id) {
+      const newNavers = navers.filter((el) => !(el.id === id));
+      setNavers(newNavers);
+    }
+  };
+
   return (
     <div className="dashboard_container">
-      <Modal open={open} setOpen={setOpen} type={type} />
+      <Modal
+        open={open}
+        setOpen={setOpen}
+        type={type}
+        id={naverId}
+        callBack={callBack}
+      />
       <Header />
       <Add />
       <div className="dashboard_wrapper">
-        {navers.map((el, index) => (
+        {navers.map((el) => (
           <Card
-            id={index}
+            id={el.id}
             avatar={el.avatar}
-            name={el.nome}
-            employ={el.cargo}
+            cargo={el.cargo}
+            idade={el.idade}
+            nome={el.nome}
+            projetos={el.projetos}
+            tempo_de_empresa={el.tempo_de_empresa}
             onOpenModal={onOpenModal}
           />
         ))}

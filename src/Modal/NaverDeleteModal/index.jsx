@@ -1,8 +1,19 @@
+import { Delete } from "../../services/Naver";
+
 import "./styles.css";
 
-export const NaverDeleteModal = ({ setOpen }) => {
-  const handleClick = () => {
+export const NaverDeleteModal = ({ setOpen, id, callBack }) => {
+  const handleCancel = () => {
     setOpen(false);
+  };
+
+  const handleDelete = async () => {
+    const res = await Delete(id);
+
+    if (res.statusCode === 200) {
+      setOpen(false);
+      callBack && callBack(id);
+    }
   };
 
   return (
@@ -10,10 +21,10 @@ export const NaverDeleteModal = ({ setOpen }) => {
       <h1>Excluir Naver</h1>
       <p>Tem certeza que deseja excluir este Naver?</p>
       <div className="container">
-        <button onClick={handleClick} className="cancelar">
+        <button onClick={handleCancel} className="cancelar">
           Cancelar
         </button>
-        <button onClick={handleClick} className="excluir primary">
+        <button onClick={handleDelete} className="excluir primary">
           Excluir
         </button>
       </div>

@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 
-import { Create } from "../services/Naver";
+import { Create, Update } from "../services/Naver";
 
 import { Header } from "../Header";
 import { Input } from "../Input";
@@ -18,19 +18,25 @@ const NAVER = {
   avatar: "https://i.pravatar.cc/300?u=",
 };
 
-export const RegisterEditNaver = ({ pageName, modalType }) => {
+export const RegisterEditNaver = ({ naverEdit, pageName, modalType }) => {
   const [naver, setNaver] = useState(NAVER);
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (naverEdit) {
+      setNaver(naverEdit);
+    }
+  }, [naverEdit]);
 
   const handleClick = () => {
     navigate("/dashboard");
   };
 
   const handleSave = async () => {
-    const res = await Create(naver);
+    const res = naverEdit ? await Update(naver) : await Create(naver);
 
-    if (res.statusCode === 200) {
+    if (res.statusCode === 201 || res.statusCode === 200) {
       setOpen(true);
     }
   };

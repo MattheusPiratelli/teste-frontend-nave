@@ -53,3 +53,8 @@ div.button {
 .card_container div {
   margin-top: 10px;
 }
+
+.card_container > img {
+  width: 280px;
+  height: 280px;
+}

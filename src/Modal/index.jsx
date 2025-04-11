@@ -7,7 +7,7 @@ import { NaverAvatarModal } from "./NaverAvatarModal";
 
 import "./styles.css";
 
-export const Modal = ({ open, type, setOpen, callBack }) => {
+export const Modal = ({ open, type, setOpen, callBack, id }) => {
   useEffect(() => {
     const body = document.getElementsByTagName("body");
     body[0].style.overflow = open ? "hidden" : "auto";
@@ -16,7 +16,9 @@ export const Modal = ({ open, type, setOpen, callBack }) => {
   const typesModal = {
     NaverCreate: <NaverCreateModal setOpen={setOpen} callBack={callBack} />,
     NaverUpdate: <NaverUpdateModal setOpen={setOpen} callBack={callBack} />,
-    NaverDelete: <NaverDeleteModal setOpen={setOpen} callBack={callBack} />,
+    NaverDelete: (
+      <NaverDeleteModal setOpen={setOpen} callBack={callBack} id={id} />
+    ),
     NaverAvatar: <NaverAvatarModal setOpen={setOpen} callBack={callBack} />,
   };
 
